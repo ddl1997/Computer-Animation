@@ -16,10 +16,39 @@
     <Filter Include="源文件\ik">
       <UniqueIdentifier>{0659997c-72a3-4459-8d19-f227975f807c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\render">
+      <UniqueIdentifier>{3ffede71-925c-4caf-99c2-bb86a88a3209}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\src">
+      <UniqueIdentifier>{a945cf92-03b6-4e3e-8d0b-ca2fc7f075d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\src\ik">
+      <UniqueIdentifier>{704c8ddf-21c8-4cd9-9cee-68a327048020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\src\render">
+      <UniqueIdentifier>{02f4f498-48d5-4c4d-9b41-a59cfafb6b25}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\render\glad.c">
+      <Filter>源文件\render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\window.cpp">
+      <Filter>源文件\render</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ik\skeleton.h">
+      <Filter>头文件\src\ik</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\window.h">
+      <Filter>头文件\src\render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\shader.h">
+      <Filter>头文件\src\render</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
