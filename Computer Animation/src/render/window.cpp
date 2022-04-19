@@ -15,13 +15,13 @@ Window::Window()
         glfwTerminate();
     }
     glfwMakeContextCurrent(window);
+    glfwSetFramebufferSizeCallback(window, framebufferSizeCallback);
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
         std::cout << "Failed to initialize GLAD" << std::endl;
     }
-
-    glViewport(0, 0, 800, 600);
 }
 
 void Window::render()

@@ -39,6 +39,15 @@
     <ClCompile Include="src\render\window.cpp">
       <Filter>源文件\render</Filter>
     </ClCompile>
+    <ClCompile Include="src\render\camera.cpp">
+      <Filter>源文件\render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ik\skeleton.cpp">
+      <Filter>源文件\ik</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\skeleton_render.cpp">
+      <Filter>源文件\render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ik\skeleton.h">
@@ -48,6 +57,18 @@
       <Filter>头文件\src\render</Filter>
     </ClInclude>
     <ClInclude Include="src\render\shader.h">
+      <Filter>头文件\src\render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\camera.h">
+      <Filter>头文件\src\render</Filter>
+    </ClInclude>
+    <ClInclude Include="include\global.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\object_render.h">
+      <Filter>头文件\src\render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\skeleton_render.h">
       <Filter>头文件\src\render</Filter>
     </ClInclude>
   </ItemGroup>

@@ -78,7 +78,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(MSBuildProjectDirectory)\include\glad;$(MSBuildProjectDirectory)\include\glfw3.3.7;$(IncludePath)</IncludePath>
+    <IncludePath>$(MSBuildProjectDirectory)\include;$(MSBuildProjectDirectory)\include\glad;$(MSBuildProjectDirectory)\include\glfw3.3.7;$(IncludePath)</IncludePath>
     <LibraryPath>$(MSBuildProjectDirectory)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -142,13 +142,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\ik\skeleton.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\render\camera.cpp" />
     <ClCompile Include="src\render\glad.c" />
+    <ClCompile Include="src\render\skeleton_render.cpp" />
     <ClCompile Include="src\render\window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\global.h" />
     <ClInclude Include="src\ik\skeleton.h" />
+    <ClInclude Include="src\render\camera.h" />
+    <ClInclude Include="src\render\object_render.h" />
     <ClInclude Include="src\render\shader.h" />
+    <ClInclude Include="src\render\skeleton_render.h" />
     <ClInclude Include="src\render\window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

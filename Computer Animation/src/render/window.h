@@ -10,11 +10,26 @@ public:
 
     void render();
 
+    void setMouseCallback(GLFWcursorposfun func)
+    {
+        glfwSetCursorPosCallback(window, func);
+    }
+
     void close();
 
 private:
     GLFWwindow* window;
 
     void processInput(GLFWwindow* window);
+
+    static void framebufferSizeCallback(GLFWwindow* window, int width, int height)
+    {
+        glViewport(0, 0, width, height);
+    }
+
+    void mouse_callback(GLFWwindow* window, double xpos, double ypos)
+    {
+
+    }
 };
 #endif
