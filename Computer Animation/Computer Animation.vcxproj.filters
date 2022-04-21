@@ -28,6 +28,9 @@
     <Filter Include="头文件\src\render">
       <UniqueIdentifier>{02f4f498-48d5-4c4d-9b41-a59cfafb6b25}</UniqueIdentifier>
     </Filter>
+    <Filter Include="资源文件\shader">
+      <UniqueIdentifier>{98f82eac-7b4c-4565-91d2-a18e395f27b4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -71,5 +74,13 @@
     <ClInclude Include="src\render\skeleton_render.h">
       <Filter>头文件\src\render</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\shader\default.frag">
+      <Filter>资源文件\shader</Filter>
+    </None>
+    <None Include="resource\shader\default.vert">
+      <Filter>资源文件\shader</Filter>
+    </None>
   </ItemGroup>
 </Project>

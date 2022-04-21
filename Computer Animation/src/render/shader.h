@@ -6,23 +6,26 @@
 #include <fstream>
 #include <sstream>
 #include <glad/glad.h>
+#include "../global.h"
 
 class Shader {
 public:
 
-    Shader(const char* vertexPath = nullptr, const char* fragmentPath = nullptr)
+    Shader(const char* vertexPath = "default.vert", const char* fragmentPath = "default.frag")
     {
         std::string vertexCode;
         std::string fragmentCode;
         std::ifstream vShaderFile;
         std::ifstream fShaderFile;
+        std::string vertexShaderDir = std::string(SHADER_DIR) + std::string(vertexPath);
+        std::string fragmentShaderDir = std::string(SHADER_DIR) + std::string(fragmentPath);
         
         vShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
         fShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
         try
         {
-            vShaderFile.open(vertexPath);
-            fShaderFile.open(fragmentPath);
+            vShaderFile.open(vertexShaderDir.c_str());
+            fShaderFile.open(fragmentShaderDir.c_str());
             std::stringstream vShaderStream, fShaderStream;
             
             vShaderStream << vShaderFile.rdbuf();

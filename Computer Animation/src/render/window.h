@@ -3,9 +3,11 @@
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include "skeleton_render.h"
 
 class Window {
 public:
+
     Window();
 
     void render();
@@ -15,10 +17,17 @@ public:
         glfwSetCursorPosCallback(window, func);
     }
 
+    void setSkeletonRender(SkeletonRender* render)
+    {
+        skRender = render;
+    }
+
     void close();
 
 private:
     GLFWwindow* window;
+
+    SkeletonRender* skRender;
 
     void processInput(GLFWwindow* window);
 

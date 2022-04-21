@@ -158,6 +158,10 @@
     <ClInclude Include="src\render\skeleton_render.h" />
     <ClInclude Include="src\render\window.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\shader\default.frag" />
+    <None Include="resource\shader\default.vert" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

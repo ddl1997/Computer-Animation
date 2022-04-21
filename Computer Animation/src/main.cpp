@@ -7,8 +7,7 @@ using namespace std;
 
 int main()
 {
-    /*Window window;
-    window.render();*/
+    Window window;
 
     ca::SkeletonNode node1(Eigen::Vector3f(0, 0, 0), 0),
         node2(Eigen::Vector3f(1, 0, 0), 1),
@@ -18,9 +17,13 @@ int main()
     sk.insertNode(&node1, &node2, false);
     sk.insertNode(&node2, &node3, true);
 
-    sk.computeWithCCD(Eigen::Vector3f(1.5, 1, 0));
+    //sk.computeWithCCD(Eigen::Vector3f(0, 2, 0));
 
-    render.render();
+    window.setSkeletonRender(&render);
+    window.render();
+
+
+    
     /*Eigen::Quaternionf q(0, 0, 0, 1);
     auto curNode = sk.root;
     printf("tag %d: %f, %f, %f\n", curNode->tag, curNode->position.x(), curNode->position.y(), curNode->position.z());

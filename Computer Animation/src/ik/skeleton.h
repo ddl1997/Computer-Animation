@@ -10,7 +10,7 @@ namespace ca {
     class SkeletonNode {
     public:
         std::vector<SkeletonNode*> children;
-        std::map<SkeletonNode*, Eigen::Quaternionf> rotations;
+        std::map<SkeletonNode*, float> rotations;
         SkeletonNode* parent;
         Eigen::Vector3f position;
 
@@ -56,6 +56,8 @@ namespace ca {
         bool insertNode(SkeletonNode* parent, SkeletonNode* node, bool isEndEffector, SkeletonNode* rootNode = nullptr);
 
         bool computeWithCCD(Eigen::Vector3f target);
+
+        void updatePosition(SkeletonNode* parent, SkeletonNode* child, float angle);
     };
 }
 #endif // !COMPUTER_ANIMATION_SKELETON_H
